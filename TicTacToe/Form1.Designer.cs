@@ -40,6 +40,7 @@
             btn11 = new Button();
             btnNewGame = new Button();
             lblResults = new Label();
+            btnReset = new Button();
             tlpGameBoard.SuspendLayout();
             SuspendLayout();
             // 
@@ -162,13 +163,13 @@
             btnNewGame.BackColor = SystemColors.MenuHighlight;
             btnNewGame.FlatStyle = FlatStyle.Popup;
             btnNewGame.ForeColor = SystemColors.MenuText;
-            btnNewGame.Location = new Point(213, 23);
+            btnNewGame.Location = new Point(135, 23);
             btnNewGame.Name = "btnNewGame";
             btnNewGame.Size = new Size(109, 43);
             btnNewGame.TabIndex = 1;
             btnNewGame.Text = "New Game";
             btnNewGame.UseVisualStyleBackColor = false;
-            btnNewGame.Click += btnNewGame_Click_1;
+            btnNewGame.Click += btnNewGame_Click;
             // 
             // lblResults
             // 
@@ -181,18 +182,32 @@
             lblResults.TabIndex = 2;
             lblResults.Text = "label1";
             // 
+            // btnReset
+            // 
+            btnReset.BackColor = SystemColors.MenuHighlight;
+            btnReset.FlatStyle = FlatStyle.Popup;
+            btnReset.ForeColor = SystemColors.MenuText;
+            btnReset.Location = new Point(298, 23);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(109, 43);
+            btnReset.TabIndex = 3;
+            btnReset.Text = "Reset";
+            btnReset.UseVisualStyleBackColor = false;
+            btnReset.Click += btnReset_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(536, 432);
+            Controls.Add(btnReset);
             Controls.Add(lblResults);
             Controls.Add(btnNewGame);
             Controls.Add(tlpGameBoard);
             Name = "Form1";
             Text = "Tic Tac Toe";
-            Load += Form1_Load;
+            Load += Form1_Load_1;
             tlpGameBoard.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -212,5 +227,6 @@
         private Button btn22;
         private Button btnNewGame;
         private Label lblResults;
+        private Button btnReset;
     }
 }
